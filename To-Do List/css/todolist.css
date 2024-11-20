@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.todolist {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.todolist h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-decoration:solid;
+    color: #061260;
+}
+
+.todolist h1 .material-icons {
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+#input {
+    padding: 15px;
+    width: 70%;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#input:focus {
+    border-color: #ff9a9e;
+}
+
+#ajt {
+    padding: 15px 20px;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#ajt:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+
+.item {
+    background-color: #fff5f5;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+ul li.checked {
+    text-decoration: line-through #ff4c4c;
+}
+
+ul li span {
+    padding: 8px;
+    border-radius: 50%;
+    color: #ff4c4c;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+#list {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+
+.item button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item button:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
